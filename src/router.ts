@@ -10,7 +10,7 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res, next) => {
   console.log("Hello World");
   res.send("Hello World");
 }); 
