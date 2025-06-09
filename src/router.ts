@@ -10,6 +10,12 @@ router.use((req, res, next) => {
   next();
 });
 
+router.get("/", (req, res) => {
+  console.log("Hello World");
+  res.send("Hello World");
+}); 
+
+
 // Report routes
 router.get("/report/order", async (req, res, next) => {
   console.log("[Router] Processing mail order request with params:", req.query);
