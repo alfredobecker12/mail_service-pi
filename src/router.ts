@@ -15,6 +15,9 @@ router.get("/", async (req, res, next) => {
   res.send("Hello World");
 }); 
 
+router.get("/test", (req, res) => {
+  res.json({ ok: true });
+});
 
 // Report routes
 router.get("/report/order", async (req, res, next) => {
