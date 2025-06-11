@@ -8,6 +8,14 @@
     ],
     "routes": [
         {
+            "src": "/report/order",
+            "dest": "dist/index.js"
+        },
+        {
+            "src": "/report/order/pdf",
+            "dest": "dist/index.js"
+        },
+        {
             "src": "/(.*)",
             "dest": "dist/index.js"
         }
