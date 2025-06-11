@@ -9,7 +9,7 @@ class MailSender {
   constructor() {
     if (!process.env.USER || !process.env.USER_PASS) {
       throw new Error(
-        "As variáveis de ambiente USER e USER_PASS devem estar definidas"
+        "As variáveis de ambiente USER e USER_PASS devem estar definidas."
       );
     }
 
