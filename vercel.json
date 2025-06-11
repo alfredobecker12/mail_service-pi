@@ -6,18 +6,18 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/report/order",
-            "dest": "dist/index.js"
+            "source": "/report/order",
+            "destination": "/api/report/order"
         },
         {
-            "src": "/report/order/pdf",
-            "dest": "dist/index.js"
+            "source": "/report/order/pdf",
+            "destination": "/api/report/order/pdf"
         },
         {
-            "src": "/(.*)",
-            "dest": "dist/index.js"
+            "source": "/(.*)",
+            "destination": "/api/$1"
         }
     ]
 }
