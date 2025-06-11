@@ -73,3 +73,4 @@ async function generatePDF(pedidos, categoria, filePath) {
         throw new Error(`Erro ao gerar o PDF: ${error}`);
     }
 }
+//# sourceMappingURL=order_report_pdf.js.map

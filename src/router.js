@@ -28,3 +28,4 @@ router.post("/report/order/pdf", async (req, res, next) => {
     await controller.handle(req, res, next);
 });
 exports.default = router;
+//# sourceMappingURL=router.js.map

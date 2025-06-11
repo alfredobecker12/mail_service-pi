@@ -18,3 +18,4 @@ app.use((req, res) => {
 exports.default = (req, res) => {
     app(req, res);
 };
+//# sourceMappingURL=index.js.map

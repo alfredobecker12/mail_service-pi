@@ -1,15 +1,15 @@
 {
   "name": "mail_service-pi",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "api/index.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "prisma generate && tsc && npm run copy-prisma",
-    "start": "node dist/index.js",
-    "dev": "tsc -w & nodemon dist/index.js",
+    "start": "node api/index.js",
+    "dev": "tsc -w & nodemon api/index.js",
     "clean": "rimraf dist",
-    "copy-prisma": "cpx \"api/src/generated/**/*\" dist/src/generated",
+    "copy-prisma": "cpx \"api/src/generated/**/*\" api/src/generated",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio"

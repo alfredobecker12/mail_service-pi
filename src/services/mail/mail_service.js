@@ -40,3 +40,4 @@ class MailSender {
     }
 }
 exports.default = new MailSender();
+//# sourceMappingURL=mail_service.js.map
