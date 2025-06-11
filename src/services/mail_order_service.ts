@@ -1,5 +1,6 @@
-import prismaClient from "../prisma/prisma_client";
+import { PrismaClient } from "@prisma/client";
 import MailSender from "./mail/mail_service";
+import prismaClient from "../prisma/prisma_client";
 
 interface PedidoRequest {
   id_pedido: number;

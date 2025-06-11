@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../generated/prisma";
+import { PrismaClient } from "@prisma/client";
 import { generatePDF } from "./pdf/order_report_pdf";
 import MailSender from "./mail/mail_service";
 
