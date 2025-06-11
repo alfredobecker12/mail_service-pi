@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(router);
 
 app.use((req, res) => {
-  res.status(404).json({ error: "Route not found" });
+  res.status(404).json({ error: "Rota não encontrada" });
 });
 
 export default (req: VercelRequest, res: VercelResponse) => {
