@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import router from "./src/router";
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
 dotenv.config();
 
@@ -24,8 +25,14 @@ app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// Export the Express app as a Vercel-compatible handler
+export default (req: VercelRequest, res: VercelResponse) => {
+  app(req, res);
+};
 
-export default app;
+// Start the server if not running on Vercel
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
